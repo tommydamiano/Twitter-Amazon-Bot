@@ -21,7 +21,7 @@ def get_tweets():
         shorturl = new_tweet.check_tweet_content(new_tweet.content)
         if shorturl:
             url = new_tweet.get_product_url(shorturl)
-            webbrowser.open(url, new= 2)
+            webbrowser.open(url, new= 2) # Only for testing purposes, will be commented out while in production
             if 'amazon' in url:
                 try:
                     price = new_tweet.get_price(url)
