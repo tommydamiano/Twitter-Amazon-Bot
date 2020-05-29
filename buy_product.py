@@ -22,12 +22,11 @@ def check_tweets():
             purchased_items['purchased_items'].append(entry['product_id'])
             collection_items.update_one({'identifier': 1}, {'$set': {'purchased_items': purchased_items['purchased_items']}})
             buy(entry['product_id'])
-            print(entry['product_id'])
             break
 
 # Use selenium to control browser, login, and buy the product specified by the amazon ID
 def buy(amazon_id):
-    driver = webdriver.Chrome(executable_path='/Users/thomasdamiano/Driver/chromedriver')
+    driver = webdriver.Chrome(executable_path='/Users/Driver/chromedriver')
     driver.get("https://www.google.com/")
     search_bar = driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
     search_bar.send_keys(amazon_id)
