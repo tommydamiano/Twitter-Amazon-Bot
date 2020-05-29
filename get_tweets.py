@@ -6,10 +6,10 @@ import schedule
 import webbrowser
 
 API_KEY = '18bsOn52ETJpwrb5wAm1zdw4fmZjqusg'
-API_SECRET_KEY = 'np8NXLf9HCuxpUQfHTjlqlej1EMIp61vxhIkwVTNvqo34XA3GcyekSC'
-ACCESS_TOKEN = '3540848f364-83TjeWmznqrCUdx9xscu7yxRqvynJ7t0h566YawSMgvbnbwZ'
+API_PO = 'np8NXLf9HCuxpUQfHTjlqlej1EMIp61vxhIkwVTNvqo34XA3GcyekSC'
+ACCESS_TOKEN = '3540848f364-83TjeWmzqrCUdx9xscu7yxRqvynJ7t0h566YawSMgvbnbwZ'
 ACCESS_TOKEN_SECRET = 'GnfsdZccUREgkFI6nGFjTMxNRonIr6n1yxtcXyVWgh3RdxTt3Rnmg'
-auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
+auth = tweepy.OAuthHandler(API_KEY, API_PO)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 name = 'tommydfor3_'
