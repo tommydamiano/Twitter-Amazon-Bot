@@ -22,7 +22,7 @@ class Tweet:
 
     def check_tweet_content(self, tweet_content):
         url = re.match(r'.*(https://t.co/[^\s]+)\s?', tweet_content)
-        if url != None:
+        if url:
             return url.group(1)
 
     def get_product_url(self, shorturl):
