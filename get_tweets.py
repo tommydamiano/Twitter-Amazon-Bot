@@ -5,10 +5,10 @@ from time import sleep
 import schedule
 import webbrowser
 
-API_KEY = '18bsOn52ETJpwrb5wAm1zdw4fmZjqusg'
-API_PO = 'np8NXLf9HCuxpUQfHTjlqlej1EMIp61vxhIkwVTNvqo34XA3GcyekSC'
-ACCESS_TOKEN = '3540848f364-83TjeWmzqrCUdx9xscu7yxRqvynJ7t0h566YawSMgvbnbwZ'
-ACCESS_TOKEN_SECRET = 'GnfsdZccUREgkFI6nGFjTMxNRonIr6n1yxtcXyVWgh3RdxTt3Rnmg'
+API_KEY = ''
+API_PO = ''
+ACCESS_TOKEN = ''
+ACCESS_TOKEN_SECRET = ''
 auth = tweepy.OAuthHandler(API_KEY, API_PO)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
@@ -21,7 +21,6 @@ def get_tweets():
         shorturl = new_tweet.check_tweet_content(new_tweet.content)
         if shorturl:
             url = new_tweet.get_product_url(shorturl)
-            webbrowser.open(url, new= 2) # Only for testing purposes, will be commented out while in production
             if 'amazon' in url:
                 try:
                     price = new_tweet.get_price(url)
